@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="803.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.had.HelloController">
+    <top>
+        <MenuBar style="-fx-background-color: #9199A8;" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #B2BACC;" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane fx:id="pole" gridLinesVisible="true" layoutX="123.0" layoutY="13.0" prefHeight="534.0" prefWidth="551.0" style="-fx-background-color: #FFFBAF;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+                <Pane layoutX="138.0" layoutY="554.0" prefHeight="197.0" prefWidth="600.0" style="-fx-background-color: #9199A8;">
+                    <children>
+                  <ImageView fitHeight="102.0" fitWidth="106.0" layoutX="432.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://cdn.discordapp.com/attachments/873863651579293716/950081162003488878/kostka.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+
+                        <Label fx:id="cisloHoduLab" layoutX="463.0" layoutY="114.0" text="2">
+                     <textFill>
+                        <LinearGradient endX="0.47619047619047616" endY="0.6523809523809523" startX="0.4761904761904762" startY="0.1857142857142857">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6166666746139526" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font></Label>
+                        <Button layoutX="277.0" layoutY="108.0" onAction="#roll" text="Hod kostkou">
+                     <font>
+                        <Font name="OPENCLASSIC" size="20.0" />
+                     </font></Button>
+                        <Button fx:id="testButton" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#test" prefHeight="44.0" prefWidth="97.0" text="TestButton" />
+                  <Label fx:id="tahLab" layoutX="296.0" layoutY="10.0" text="Cislo tahu: 1">
+                     <textFill>
+                        <RadialGradient centerX="0.4666666666666667" centerY="0.6904761904761905" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18727624416351318" green="0.7200000286102295" blue="0.014399999752640724" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="kontrolaLab" layoutX="475.0" layoutY="73.0" rotate="35.0" text="1">
+                     <textFill>
+                        <LinearGradient endX="0.47619047619047616" endY="0.6523809523809523" startX="0.4761904761904762" startY="0.1857142857142857">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.6166666746139526" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="277.0" layoutY="168.0" mnemonicParsing="false" onAction="#AutoPlay" text="Auto mode" />
+                  <Button fx:id="debug" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#scoreDebug" prefHeight="44.0" prefWidth="97.0" text="Score adder" />
+                  <Button layoutX="22.0" layoutY="15.0" mnemonicParsing="false" onAction="#onStartLogic" text="Start" />
+                    </children>
+                </Pane>
+            <VBox fx:id="scoreBox" layoutX="696.0" layoutY="14.0" prefHeight="302.0" prefWidth="110.0" />
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
