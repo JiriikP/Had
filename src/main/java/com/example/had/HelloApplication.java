@@ -13,18 +13,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+   private Scene scene1;
+
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 800);
+        Scene scene = new Scene(fxmlLoader.load(), 1260, 700);
 
 
 
         stage.setTitle("Hadi a zebriky!");
         stage.setScene(scene);
-        stage.getIcons().add(new Image("https://cdn.discordapp.com/attachments/644113506383298562/949786451158106142/had_icon.png"));
+        stage.getIcons().add(new Image("had_icon.png"));
         stage.show();
         stage.setMaximized(false); // mozna pak true
+        stage.resizableProperty().set(false);
 
 
     }
